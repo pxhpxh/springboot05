@@ -2,6 +2,7 @@ package com.example.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.example.bean.User;
+import com.example.dto.grid.Pager;
 
 /**
  * <p>
@@ -13,4 +14,5 @@ import com.example.bean.User;
  */
 public interface UserService extends IService<User> {
 
+    Pager<User> getPage(Pager pager);
 }

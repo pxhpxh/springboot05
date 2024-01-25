@@ -2,6 +2,7 @@ package com.example.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.example.bean.User;
+import com.github.yulichang.base.MPJBaseMapper;
 
 /**
  * <p>
@@ -11,6 +12,6 @@ import com.example.bean.User;
  * @author pxh
  * @since 2024-01-19
  */
-public interface UserMapper extends BaseMapper<User> {
+public interface UserMapper extends MPJBaseMapper<User> {
 
 }
