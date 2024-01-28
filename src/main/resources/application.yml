@@ -1,9 +1,23 @@
 spring:
+  main:
+    allow-circular-references: true
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/test05?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
     password: a3292588
     username: root
+
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    timeout: 0
+    jedis:
+      pool:
+        max-active: 8 # 连接池最大连接数，默认为 8 。使用负数表示没有限制。
+        max-idle: 8 # 默认连接数最小空闲的连接数，默认为 8 。使用负数表示没有限制。
+        min-idle: 0 # 默认连接池最小空闲的连接数，默认为 0 。允许设置 0 和 正数。
+        max-wait: -1 # 连接池最大阻塞等待时间，单位：毫秒。默认为 -1 ，表示不限制。
 
   #rabbitmq:
     #虚拟host 可以不设置,使用server默认host
@@ -15,7 +29,7 @@ spring:
 
 
 server:
-  port: 8084
+  port: 8001
 
 
 mybatis:

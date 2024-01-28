@@ -33,13 +33,13 @@ import java.util.Map;
  * @since 2024-01-19
  */
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/test/user")
 public class UserController {
 
     @Autowired
     private UserService userService;
 
-    @RequestMapping("/list")
+    @RequestMapping("/list2")
     public ResponseData list(@RequestBody Pager pager){
         try {
             Pager<User> bankPager = userService.getPage(pager);
